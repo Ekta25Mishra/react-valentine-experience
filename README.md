@@ -1,16 +1,98 @@
-# React + Vite
+# 💖 React Valentine Experience
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A cute, interactive, and personalized Valentine’s Day website built with **React** 💌  
+Create a magical surprise for your loved one by generating a special link — they just open it and enjoy the experience ✨
 
-Currently, two official plugins are available:
+🌐 **Live Demo:**  
+👉 https://react-valentine-experience.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🌸 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 💕 Beautiful & aesthetic landing pages
+- 💖 Floating hearts and smooth animations
+- 💌 Personalized Valentine link generation
+- 🧑‍🤝‍🧑 Partner sees the surprise without filling any form
+- ❓ Fun, customizable questions with correct/wrong options
+- 😢 Emotional message on wrong answer
+- 🎉 Cute animations on correct answer / YES click
+- 📸 Upload multiple photos (displayed only after YES)
+- 📱 Fully responsive (mobile-friendly)
+- ⚡ Fast & lightweight (Vite + React)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+- **React.js**
+- **Vite**
+- **React Router DOM**
+- **Framer Motion** (animations)
+- **CSS3**
+- **LocalStorage** (for data persistence)
+- **Vercel** (deployment)
+
+---
+
+## 🚀 How It Works
+
+1. Creator fills a form with:
+   - Partner’s name
+   - Photos
+   - A fun question & options
+2. A **unique link** is generated
+3. Share the link with your partner 💌
+4. Partner:
+   - Gets a Valentine’s wish
+   - Answers the question
+   - Sees photos & animations only after saying **YES** 💖
+
+---
+
+## 📦 Installation & Setup (Local)
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Ekta25Mishra/react-valentine-experience.git
+Go to project directory:
+
+cd react-valentine-experience
+
+
+Install dependencies:
+
+npm install
+
+
+Run locally:
+
+npm run dev
+```
+---
+
+🌐 Deployment
+
+This project is deployed using Vercel.
+
+Every push to the main branch automatically triggers a new deployment 🚀
+
+Live URL:
+
+https://react-valentine-experience.vercel.app/
+
+---
+
+❤️ Author
+
+Ekta Mishra
+B.Tech CSE Student | Frontend Developer
+GitHub: https://github.com/Ekta25Mishra
+
+---
+
+🌹 Final Note
+
+This project is made with love, creativity, and lots of hearts 💖
+Feel free to fork, star ⭐, or use it to surprise someone special 😌✨
