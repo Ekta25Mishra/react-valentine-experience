@@ -3,19 +3,30 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import FloatingHearts from "../components/FloatingHearts";
 
+/* 👇 helper function (IMPORTANT) */
+const toBase64 = (file) =>
+  new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = reject;
+  });
 
 export default function Setup() {
   const navigate = useNavigate();
 
-  const submit = (e) => {
+  const submit = async (e) => {
     e.preventDefault();
+
     const id = uuid();
+
+    /* 👇 convert photos properly */
+    const files = Array.from(e.target.photos.files);
+    const photos = await Promise.all(files.map(toBase64));
 
     const data = {
       name: e.target.name.value,
-      photos: Array.from(e.target.photos.files).map(f =>
-        URL.createObjectURL(f)
-      ),
+      photos,
       questions: [
         {
           q: e.target.q1.value,
@@ -28,13 +39,17 @@ export default function Setup() {
       ]
     };
 
+    /* 👇 save full data safely */
     localStorage.setItem(id, JSON.stringify(data));
+
+    /* 👇 navigate ONLY with id */
     navigate(`/love/${id}/wish`);
   };
 
   return (
     <div className="setup-wrapper">
-      <FloatingHearts/>
+      <FloatingHearts />
+
       <motion.form
         className="setup-card"
         onSubmit={submit}
