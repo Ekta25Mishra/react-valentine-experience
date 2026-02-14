@@ -1,0 +1,209 @@
+body {
+  background: #fff5f8;
+  font-family: Poppins, sans-serif;
+  text-align: center;
+}
+
+.card {
+  background: white;
+  max-width: 420px;
+  margin: 80px auto;
+  padding: 40px;
+  border-radius: 28px;
+  box-shadow: 0 20px 40px rgba(255,92,141,.2);
+}
+
+button {
+  background: linear-gradient(135deg, #ff5c8d, #ffc0cb);
+  border: none;
+  padding: 12px 26px;
+  border-radius: 999px;
+  margin: 10px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.gallery {
+  column-count: 2;
+  gap: 12px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 18px;
+  margin-bottom: 12px;
+}
+/* SETUP PAGE */
+.setup-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #fff1f5, #ffe4ec);
+}
+
+.setup-card {
+  background: white;
+  width: 420px;
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0 30px 60px rgba(255, 92, 141, 0.25);
+}
+
+.setup-card h1 {
+  font-family: Pacifico, cursive;
+  color: #ff5c8d;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.setup-card label {
+  font-size: 13px;
+  margin-top: 14px;
+  display: block;
+  color: #555;
+}
+
+.setup-card input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-top: 6px;
+  border-radius: 14px;
+  border: 1px solid #ffd6e3;
+  outline: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.setup-card input:focus {
+  border-color: #ff5c8d;
+  box-shadow: 0 0 0 2px rgba(255,92,141,.15);
+}
+
+.setup-card button {
+  width: 100%;
+  margin-top: 28px;
+  background: linear-gradient(135deg, #ff5c8d, #ffc0cb);
+  border: none;
+  padding: 14px;
+  border-radius: 999px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 12px 25px rgba(255,92,141,.35);
+  transition: transform .2s ease;
+}
+
+.setup-card button:hover {
+  transform: scale(1.05);
+}
+/* FLOATING HEARTS BACKGROUND */
+.floating-hearts {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.floating-hearts span {
+  position: absolute;
+  bottom: -40px;
+  animation: floatUp linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh) scale(1.4);
+    opacity: 0;
+  }
+}
+.setup-card,
+.card {
+  position: relative;
+  z-index: 2;
+}
+/* FINAL REVEAL SCREEN */
+.reveal-screen {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #fff1f5, #ffe4ec);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+.reveal-screen h1 {
+  font-family: Pacifico, cursive;
+  color: #ff5c8d;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.reveal-screen h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.photo-row {
+  display: flex;
+  gap: 18px;
+  margin: 20px 0;
+}
+
+.photo-row img {
+  width: 140px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 22px;
+  box-shadow: 0 20px 40px rgba(255,92,141,.35);
+}
+
+.final-msg {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+/* HEART RAIN */
+.heart-rain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.heart-rain span {
+  position: absolute;
+  left: calc(10% + 80% * random());
+  font-size: 26px;
+}
+/* SAD HEARTS */
+.sad-hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.sad-hearts span {
+  position: absolute;
+  left: 50%;
+  font-size: 30px;
+}
